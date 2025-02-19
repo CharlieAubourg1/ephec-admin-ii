@@ -2,8 +2,11 @@
 
 GROUPE 2TL1-6  
 
-# Membres
 
-mickTa : Mickaël TALIDEC  
-MrNobody005 : Sydney TEXIER  
-CharlieAubourg1 : Charlie AUBOURG  
+## Membres du groupe
+
+| Nom               | Pseudo Github  | 
+| ----------------- | -------------- | 
+| Mickaël TALIDEC   | mickTa         | 
+| Sydney TEXIER     | MrNobody005    | 
+| Charlie AUBOURG   | CharlieAubourg1| 
