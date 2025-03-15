@@ -1,0 +1,13 @@
+services:
+  dns:
+    build:
+      context: .
+    image: bind9_v2
+    ports: 
+      - "53:53/tcp"
+      - "53:53/udp"
+    container_name: dns
+    restart: unless-stopped
+    volumes:
+      - ./configFiles/named.conf:/etc/bind/named.conf
+      - ./configFiles/l2-4.zone:/etc/bind/zone/l2-4.zone
