@@ -30,35 +30,26 @@ GROUPE 2TL2-4
 - `docker-compose.yml` : Permet de lancer le serveur DNS avec Docker Compose.
 - `configFiles/l2-4.zone` : Fichier de zone DNS contenant les enregistrements.
 - `configFiles/named.conf` : Fichier de configuration principal de Bind.
-
-## 🚀 Installation et utilisation
-
-### 2️⃣ Cloner le projet
-```bash
-git clone <URL_DU_REPO>
-cd bind-project
-```
-
-### 3️⃣ Démarrer le serveur DNS
+### 1 Démarrer le serveur DNS
 Lancer le serveur en arrière-plan avec Docker Compose :
 ```bash
 docker compose up -d
 ```
 
-### 4️⃣ Vérifier que le conteneur tourne
+### 2 Vérifier que le conteneur tourne
 ```bash
 docker ps -a
 ```
 Le conteneur du serveur DNS doit être listé comme en cours d'exécution.
 
-### 5️⃣ Tester la résolution DNS
+### 3 Tester la résolution DNS
 Depuis la machine hôte :
 ```bash
 dig @localhost www.l2-4.ephec-ti.be
 ```
 Si le serveur DNS fonctionne correctement, il doit renvoyer une adresse IP valide.
 
-### 6️⃣ Arrêter le serveur DNS
+### 4 Arrêter le serveur DNS
 ```bash
 docker compose down
 ```
