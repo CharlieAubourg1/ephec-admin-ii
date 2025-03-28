@@ -1,0 +1,49 @@
+version: '3.7'
+
+services:
+  php:
+    build:
+      context: ./php
+    container_name: php
+    volumes:
+      - ./www:/var/www/html/www
+    environment:
+      - MARIADB_USER=wt-user
+      - MARIADB_PASSWORD=wt-pwd
+      - MARIADB_HOST=mariadb
+    networks:
+      - dmz
+      - db_net
+
+  nginx:
+    image: custom-nginx_v3
+    container_name: nginx_web
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./www:/var/www/html/www
+    networks:
+      - dmz
+    depends_on:
+      - php
+
+  mariadb:
+    image: mariadb
+    container_name: mariadbtest
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: woodytoys
+      MARIADB_USER: wt-user
+      MARIADB_PASSWORD: wt-pwd
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./my-resolve.cnf:/etc/mysql/conf.d/my-resolve.cnf
+    networks:
+      - db_net
+
+networks:
+  dmz:
+    driver: bridge
+  db_net:
+    driver: bridge
