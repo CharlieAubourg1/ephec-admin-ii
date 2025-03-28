@@ -49,7 +49,7 @@ ephec-admin-ii
 - `./TP4/configs/docker-compose.yml` : Permet de lancer le serveur DNS avec Docker Compose.
 - `./TP4/configs/configFiles/l2-4.zone` : Fichier de zone DNS contenant les enregistrements.
 - `./TP4/configFiles/named.conf` : Fichier de configuration principal de Bind.
-- 
+
 ### 1 Démarrer le serveur DNS
 Lancer le serveur en arrière-plan avec Docker Compose :
 ```bash
