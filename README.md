@@ -15,21 +15,41 @@ GROUPE 2TL2-4
 ## 📂 Arborescence du projet
 
 ```
-.
-└── bind-project
-    ├── README.md
-    ├── configs
-    │   ├── Dockerfile
-    │   ├── configFiles
-    │   │   ├── l2-4.zone
-    │   │   └── named.conf
-    │   └── docker-compose.yml
+ephec-admin-ii
+ ┣ img
+ ┣ TP3
+ ┃ ┣ Dockerfile
+ ┃ ┗ index.html
+ ┣ TP4
+ ┃ ┗ configs
+ ┃ ┃ ┣ configFiles
+ ┃ ┃ ┃ ┣ l2-4.zone
+ ┃ ┃ ┃ ┗ named.conf
+ ┃ ┃ ┣ docker-compose.yml
+ ┃ ┃ ┗ Dockerfile
+ ┣ TP6
+ ┃ ┣ web
+ ┃ ┃ ┣ blog
+ ┃ ┃ ┃ ┗ index.html
+ ┃ ┃ ┣ php
+ ┃ ┃ ┃ ┗ Dockerfile
+ ┃ ┃ ┣ www
+ ┃ ┃ ┃ ┣ index.html
+ ┃ ┃ ┃ ┗ products.php
+ ┃ ┃ ┣ docker-compose.yml
+ ┃ ┃ ┣ Dockerfile
+ ┃ ┃ ┣ init.sql
+ ┃ ┃ ┣ my-resolve.cnf
+ ┃ ┃ ┗ nginx.conf
+ ┃ ┗ woodytoys.sql
+ ┗ README.md
 ```
 
-- `Dockerfile` : Définit l'image Docker pour le serveur Bind.
-- `docker-compose.yml` : Permet de lancer le serveur DNS avec Docker Compose.
-- `configFiles/l2-4.zone` : Fichier de zone DNS contenant les enregistrements.
-- `configFiles/named.conf` : Fichier de configuration principal de Bind.
+- `./TP4/configs/Dockerfile` : Définit l'image Docker pour le serveur Bind.
+- `./TP4/configs/docker-compose.yml` : Permet de lancer le serveur DNS avec Docker Compose.
+- `./TP4/configs/configFiles/l2-4.zone` : Fichier de zone DNS contenant les enregistrements.
+- `./TP4/configFiles/named.conf` : Fichier de configuration principal de Bind.
+- 
 ### 1 Démarrer le serveur DNS
 Lancer le serveur en arrière-plan avec Docker Compose :
 ```bash
