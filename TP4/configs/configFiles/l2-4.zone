@@ -1,7 +1,7 @@
 $ORIGIN l2-4.ephec-ti.be.
 $TTL 3600
 @       IN SOA  ns.l2-4.ephec-ti.be. admin.l2-4.ephec-ti.be. (
-        2025040301  ; Augmente le numéro de série (YYYYMMDDXX)
+        2025040602  ; Augmente le numéro de série (YYYYMMDDXX)
         14400       ; Rafraîchissement
         3600        ; Tentatives en cas d'échec
         604800      ; Expiration
@@ -18,9 +18,13 @@ ns2     IN A     54.36.181.46
 ns2     IN AAAA  2001:41d0:302:2200::5e97
 
 www     IN A     54.36.181.46
-www     IN AAAA     2001:41d0:302:2200::5e97
+www     IN AAAA  2001:41d0:302:2200::5e97
 
 blog    IN A     54.36.181.46
-blog    IN AAAA     2001:41d0:302:2200::5e97
+blog    IN AAAA  2001:41d0:302:2200::5e97
 
-@       IN TXT   "v=spf1 ip4:54.36.180.12 ip6:2001:41d0:302:2200::5e72 -all"
+mail    IN A     54.36.182.213
+mail    IN AAAA  2001:41d0:302:2200::5e6e
+@       IN MX    10 mail.l2-4.ephec-ti.be.
+
+@       IN TXT   "v=spf1 ip4:54.36.180.12 ip4:54.36.181.46 ip4:54.36.182.213 ip6:2001:41d0:302:2200::5e72 -all"
