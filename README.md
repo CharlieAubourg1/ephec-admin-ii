@@ -27,7 +27,7 @@ ephec-admin-ii
  ┃ ┃ ┃ ┗ named.conf
  ┃ ┃ ┣ docker-compose.yml
  ┃ ┃ ┗ Dockerfile
- ┣ TP6
+ ┣ TP5-TP6
  ┃ ┣ web
  ┃ ┃ ┣ blog
  ┃ ┃ ┃ ┗ index.html
